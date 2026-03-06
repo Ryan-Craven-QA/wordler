@@ -1,4 +1,5 @@
 # Wordler
+A modern Wordle-style web app built with vanilla HTML, CSS, and JavaScript.
 
 ## Follow Me
 
@@ -9,8 +10,6 @@
 - 🎬 **YouTube:** [@AInsightshq](https://youtube.com/@AInsightshq)
 - 🔗 **Links & Tools:** [beacons.ai/ainsights](https://beacons.ai/ainsights)
 - 🛒 **Gumroad:** [ainsightshq.gumroad.com](https://ainsightshq.gumroad.com)
-
-A modern Wordle-style web app built with vanilla HTML, CSS, and JavaScript.
 
 ## Features
 
