@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wordler</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="app-header">
+      <button class="icon-btn" id="help-btn" type="button" aria-label="How to play">?</button>
+      <h1 class="brand">WORDLER</h1>
+      <button class="icon-btn" id="stats-btn" type="button" aria-label="View stats">#</button>
+    </header>
+
+    <section class="top-controls">
+      <div class="control">
+        <label for="mode-select">Mode</label>
+        <select id="mode-select" class="select-input">
+          <option value="very-easy">Very Easy (3)</option>
+          <option value="easy">Easy (4)</option>
+          <option value="normal" selected>Normal (5)</option>
+          <option value="hard">Hard (6)</option>
+          <option value="very-hard">Very Hard (7)</option>
+        </select>
+      </div>
+      <div class="control">
+        <label for="theme-select">Theme</label>
+        <select id="theme-select" class="select-input">
+          <option value="nyt" selected>NYT Dark</option>
+          <option value="ocean">Ocean</option>
+          <option value="sunset">Sunset</option>
+          <option value="forest">Forest</option>
+          <option value="neon">Neon</option>
+        </select>
+      </div>
+      <div class="race-meta">
+        <p class="timer" id="timer">00:00</p>
+        <p class="challenge-label" id="challenge-label"></p>
+      </div>
+    </section>
+
+    <section class="game-board" id="game-board" aria-label="Word guess board"></section>
+
+    <section class="status-wrap">
+      <p class="status-message" id="status-message" aria-live="polite"></p>
+      <div class="actions">
+        <button class="action-btn" id="new-game-btn" type="button">New Game</button>
+        <button class="action-btn" id="share-btn" type="button" disabled>Share</button>
+        <button class="action-btn" id="challenge-btn" type="button">Challenge Link</button>
+        <button class="action-btn" id="settings-btn" type="button">Settings</button>
+        <button class="action-btn hidden" id="ready-btn" type="button">Ready</button>
+        <button class="action-btn hidden" id="rematch-btn" type="button">Rematch</button>
+      </div>
+      <p class="stats-line" id="stats-line"></p>
+    </section>
+
+    <section class="keyboard" id="keyboard" aria-label="On-screen keyboard"></section>
+    <div class="win-burst" id="win-burst" aria-hidden="true"></div>
+  </main>
+
+  <dialog class="modal" id="help-modal">
+    <div class="modal-content">
+      <h2>How To Play</h2>
+      <p>Guess the WORDLER in 6 tries.</p>
+      <ul>
+        <li>Each guess must be a valid 5-letter word.</li>
+        <li>Green means the letter is in the word and in the correct spot.</li>
+        <li>Yellow means the letter is in the word but in the wrong spot.</li>
+        <li>Gray means the letter is not in the word.</li>
+      </ul>
+      <button class="action-btn" id="close-help-btn" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="stats-modal">
+    <div class="modal-content">
+      <h2>Your Stats</h2>
+      <p id="stats-modal-content"></p>
+      <button class="action-btn" id="close-stats-btn" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="settings-modal">
+    <div class="modal-content">
+      <h2>Realtime Settings</h2>
+      <p>Set your Supabase credentials once per browser profile.</p>
+      <div class="settings-grid">
+        <label for="supabase-url-input">Supabase Project URL</label>
+        <input id="supabase-url-input" class="modal-input" type="text" placeholder="https://your-project.supabase.co" />
+        <label for="supabase-anon-input">Publishable / anon key</label>
+        <textarea id="supabase-anon-input" class="modal-input modal-textarea" rows="3" placeholder="eyJ..."></textarea>
+      </div>
+      <p id="settings-status" class="settings-status"></p>
+      <div class="actions">
+        <button class="action-btn" id="save-settings-btn" type="button">Save</button>
+        <button class="action-btn" id="test-realtime-btn" type="button">Test Realtime</button>
+        <button class="action-btn" id="clear-settings-btn" type="button">Clear</button>
+        <button class="action-btn" id="close-settings-btn" type="button">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
