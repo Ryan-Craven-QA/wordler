@@ -1,5 +1,15 @@
 # Wordler
 
+## Follow Me
+
+- 🐦 **X/Twitter:** [@ryan_tech_lab](https://x.com/ryan_tech_lab)
+- 🧵 **Threads:** [@ainsightshq](https://threads.net/@ainsightshq)
+- 💼 **LinkedIn:** [AInsights](https://www.linkedin.com/company/ainsightsco)
+- 📸 **Instagram:** [@ainsightshq](https://instagram.com/ainsightshq)
+- 🎬 **YouTube:** [@AInsightshq](https://youtube.com/@AInsightshq)
+- 🔗 **Links & Tools:** [beacons.ai/ainsights](https://beacons.ai/ainsights)
+- 🛒 **Gumroad:** [ainsightshq.gumroad.com](https://ainsightshq.gumroad.com)
+
 A modern Wordle-style web app built with vanilla HTML, CSS, and JavaScript.
 
 ## Features
